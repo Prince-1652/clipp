@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/dashboards.png" alt="clipp dashboard" width="800" />
+  <img src="https://raw.githubusercontent.com/Prince-1652/clipp/main/assets/dashboards.png" alt="clipp dashboard" width="800" />
   <h1><b>clipp</b></h1>
   <p><b>clipp any video from YouTube, X, Instagram, Threads & 1800+ sites — right from your terminal.</b></p>
   <p>paste. clipp. done.</p>
@@ -44,12 +44,12 @@ Switch between the **Video** and **Audio** panels using `←`/`→`, and pick a 
 `esc` goes back, and `^c` quits. Or just use your mouse — the format lists and the footer hints are fully clickable, and clicking the `clipp` logo takes you back home.
 
 <div align="center">
-  <img src="assets/download.png" alt="clipp downloading" width="800" />
+  <img src="https://raw.githubusercontent.com/Prince-1652/clipp/main/assets/download.png" alt="clipp downloading" width="800" />
 </div>
 
 ## Features
 - **Incredibly Fast**: Just paste a URL and hit Enter.
-- **Dual Panels**: Choose cleanly between Video and Audio formats natively.
+- **Dual Panels**: Choose cleanly between available Video and Audio formats natively.
 - **Cross-Platform Folder Picker**: Automatically uses the native, modern folder browser on Windows, Mac, and Linux to pick download locations.
 - **Beautiful TUI**: Built with React and Ink.
 - **Auto-managed Engine**: Silently fetches and auto-updates its own private, isolated copy of `yt-dlp` — completely immune to local dependency conflicts or outdated global installs.
