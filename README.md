@@ -59,4 +59,4 @@ Switch between the **Video** and **Audio** panels using `←`/`→`, and pick a 
 - [yt-dlp](https://github.com/yt-dlp/yt-dlp)
 
 ## License
-This project is [MIT licensed](LICENSE).
+This project is [MIT](LICENSE) licensed.
