@@ -11,12 +11,12 @@
 
 **Install Globally (Windows, Mac, Linux):**
 ```bash
-npm install -g clipp
+npm install -g clipp-cli
 ```
 
 **Run Without Installing:**
 ```bash
-npx clipp
+npx clipp-cli
 ```
 
 ## Shortcuts

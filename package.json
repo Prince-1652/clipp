@@ -1,5 +1,5 @@
 {
-  "name": "clipp",
+  "name": "clipp-cli",
   "version": "0.1.0",
   "description": "clipp any video from YouTube, X, Instagram, Threads & 1800+ sites — right from your terminal. paste. clipp. done.",
   "type": "module",
