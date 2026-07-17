@@ -13,6 +13,7 @@
 ```bash
 npm install -g clipp-cli
 ```
+> *(Note: You may need to restart your terminal after installing for the `clipp` command to be recognized!)*
 
 **Run Without Installing:**
 ```bash
