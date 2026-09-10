@@ -275,11 +275,16 @@ function AppContent({
           filepath = await download({...base, infoJsonPath: infoJsonRef.current}, handlers, controller.signal)
         } catch (error) {
           if (controller.signal.aborted) throw error
-          // media urls in the cached info can expire — retry with a fresh extraction
-          setPhase(prev =>
-            prev.name === 'downloading' ? {...prev, progress: undefined, refreshing: true} : prev,
-          )
-          filepath = await download(base, handlers, controller.signal)
+          const msg = error instanceof Error ? error.message : String(error)
+          if (msg.includes('403') || msg.includes('HTTP Error 4') || msg.includes('Forbidden') || msg.includes('expire')) {
+            // media urls in the cached info can expire — retry with a fresh extraction
+            setPhase(prev =>
+              prev.name === 'downloading' ? {...prev, progress: undefined, refreshing: true} : prev,
+            )
+            filepath = await download(base, handlers, controller.signal)
+          } else {
+            throw error
+          }
         }
         onOutcome({filepath})
         setHistory(addToHistory(url))

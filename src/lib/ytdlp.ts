@@ -68,17 +68,17 @@ export async function ensureYtDlp(onStatus: (message: string) => void, signal?: 
 
 /**
  * Find ffmpeg for stream merging / mp3 extraction: system install first,
- * ffmpeg-static as fallback. Returns undefined if neither exists — yt-dlp
+ * @ffmpeg-installer/ffmpeg as fallback. Returns undefined if neither exists — yt-dlp
  * still works for single-file formats without it.
  */
 export async function findFfmpeg(): Promise<string | undefined> {
   if (await commandWorks('ffmpeg', ['-version'])) return undefined // on PATH, yt-dlp finds it itself
   try {
-    const mod = await import('ffmpeg-static')
-    const ffmpegPath = (mod.default ?? mod) as unknown as string | null
+    const mod = await import('@ffmpeg-installer/ffmpeg')
+    const ffmpegPath = mod.default?.path ?? mod.path
     if (ffmpegPath && (await commandWorks(ffmpegPath, ['-version']))) return ffmpegPath
   } catch {
-    // ffmpeg-static not installed or unsupported platform
+    // @ffmpeg-installer/ffmpeg not installed or unsupported platform
   }
   return undefined
 }
